@@ -1,0 +1,55 @@
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pictureback {
+  width: 100%;  /* This will ensure it takes the full width of its parent container */
+  height: 70vh; /* 70% of the viewport height */
+  background-size: cover; /* Ensures the background image covers the div entirely */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents image from repeating if too small */
+  position: relative; /* To position children relative to this container */
+  
+}
+
+.wallcontainer {
+  width: 100%; /* Taking the full width of its parent container */
+  height: 70vh; /* Taking the full height of the pictureback */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  position: absolute; /* Absolute positioning relative to pictureback */
+  top: 0; /* Start from the top */
+  left: 0; /* Start from the left */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Black overlay with 50% transparency, can help in reading text over images */
+}
+
+
+.wallcontainer::after {
+ content: "";
+ position: absolute;
+ top: 88%;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.716));
+ pointer-events: none;
+}
+
+.headinfg, .desc {
+  color: white; /* Making text color white for better visibility */
+  text-align: center; /* Center-aligning the text */
+}
+
+/* Additional stylings for better appearance */
+.headinfg {
+  margin-bottom: 10px; /* Space between title and description */
+  font-size: 3em; /* Making title a bit larger */
+}
+
+.desc {
+  font-size: 25px; /* Making description slightly larger than regular text */
+}

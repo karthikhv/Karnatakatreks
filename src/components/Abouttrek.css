@@ -1,0 +1,99 @@
+.aboutinfo {
+  font-family: 'Arial', sans-serif; /* Using Arial as a placeholder, feel free to replace with your preferred font */
+  max-width: 1200px; /* Optional width constraint for readability */
+  margin: 0; /* Center the content if the screen is wider than 1200px */
+  padding: 20px; /* Some padding around the edges */
+  background-color: #f9f9f9; /* Light grey background for the entire section, feel free to change */
+  border-radius: 5px; /* Optional rounded corners for the .aboutinfo box */
+  position: relative;
+  
+}
+.heading {
+  text-align: center; /* Centering the heading */
+  margin-bottom: 20px; /* Spacing between the heading and the main content */
+}
+
+.heading h1 {
+  font-size: 28px; /* Font size for the main heading */
+  color: #333; /* Dark grey color for the text, adjust if needed */
+  margin-bottom: 0; /* Remove any default margin */
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.maincontent {
+  font-size: 16px; /* Default font size for the main content */
+  color: #3a3939; /* Dark grey color for the text */
+  line-height: 1.5; /* Spacing between lines of text for readability */
+}
+
+.maincontent p {
+  margin-bottom: 20px; /* Spacing between paragraphs */
+}
+
+.middle {
+  display: flex; /* Make the children sit side by side */
+  gap: 20px; /* Space between the left and right content */
+}
+
+.leftcontent, .rightcontent {
+  text-align:justify;
+  flex: 1; /* Both occupy half the space */
+  padding: 0 10px; /* Padding for visual appearance */
+}
+
+.leftcontent h1, .rightcontent h1 {
+  font-size: 24px; /* Font size for the subheadings */
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 15px; /* Space between heading and content */
+  color: #000000; /* Slightly darker text color for contrast */
+}
+
+/* Optional: if you want to add more styles for other elements or classes, continue adding them below. */
+/* ... (the rest of your styles remain unchanged) ... */
+
+.middle {
+  display: flex; /* Make the children sit side by side by default */
+  gap: 20px; /* Space between the left and right content */
+  flex-direction: row; /* Explicitly set to row for clarity, though it's the default */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) { 
+  .middle {
+    flex-direction: column; /* Arrange children vertically on smaller screens */
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) { 
+  /* ... (rest of your styles for larger screens) ... */
+}
+
+
+/* Styles for larger screens */
+@media (min-width: 769px) { /* Adjusting for larger screens */
+  .aboutinfo {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .heading h1 {
+      font-size: 2.5em;
+  }
+  
+  .maincontent {
+      flex-direction: row; /* Content side by side on larger screens */
+      gap: 20px; /* Providing space between left and right content */
+  }
+
+  .leftcontent, .rightcontent {
+      flex: 1; /* Each will take roughly half the space */
+  }
+
+  .leftcontent h1, .rightcontent h1 {
+      font-size: 2em;
+  }
+}

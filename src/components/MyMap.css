@@ -1,0 +1,103 @@
+
+.Google {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  height: 100vh; /* Assuming you want it to take up the full viewport height */
+  background-image: url('https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mapcontainer {
+  width: 80%; /* You can adjust this width as per your requirements */
+  height: 65%; /* Adjust height too if needed */
+  border-radius: 10px;
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* This helps in ensuring that the map doesn't overflow its container */
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.mymap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 10px;
+  gap: 1.6rem; 
+  justify-content: space-between; 
+  
+  /* Adding the background image */
+  background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.titlebutton {
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  margin: 15px ; 
+  text-align: center;
+  flex-basis: calc(30% - 1rem); /* 3 items per row, 1rem for gap */
+
+  transition: box-shadow 0.3s ease;
+}
+
+.titlebutton:hover {
+  box-shadow: 2px 4px 10px 3px rgba(90, 191, 62, 0.379);
+  box-shadow:  inset 1px -60px 8px rgba(94, 243, 94, 0.27);
+  transition:0.2s all;
+  transform: scale(1.08);
+  background-color: rgba(15, 52, 0, 0.207);
+}
+
+.location-name {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.map-link {
+  text-decoration: none;
+}
+
+.map-btn {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.map-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+  transition:0.3s ease-in-out;
+}
+
+/* For smaller screens */
+/* For smaller screens */
+@media (max-width: 568px) {
+  
+  .titlebutton {
+      flex-basis: 100%; /* 2 items per row, 1rem for gap */
+  }
+
+  /* Optional: any adjustments to .mymap for mobile screens */
+  
+
+}

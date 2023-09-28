@@ -1,0 +1,111 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+/* Styles for rotating background */
+.rota {
+  display: flex;
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;  
+  height: 85vh;
+  opacity: 0.95;
+  box-shadow: inset 0em 3em 1rem rgba(1, 1, 1, 0.245);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 1s ease;
+  position: relative;
+}
+
+.rota .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Rotating images effect */
+.box {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+  
+}
+
+@keyframes animate {
+  0% {
+      transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+      transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span img {
+  position: absolute;
+  top: 6%;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+/* ... */
+
+@media screen and (max-width: 768px) {
+  .rota {
+    height: 75vh;
+    justify-content: flex-start; /* Push the box to the left */
+    padding-left: 15px; 
+  }
+
+  .box {
+    width: 100px;
+    height: 150px;
+  }
+
+  .box span {
+    display: none; /* Hide all images by default */
+  }
+
+  .box span.showing {
+    display: block; /* Only show the one with the class 'showing' */
+    animation: animate 12s linear infinite;
+  }
+
+  .box span img {
+    top: 2%;
+    width: 90%; 
+    height: 90%;
+    transform: none;
+  }
+}

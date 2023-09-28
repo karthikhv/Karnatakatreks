@@ -1,0 +1,82 @@
+.nav {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 60px; /* defined height instead of 100% */
+  width: 100%;
+  position: fixed; /* only fixed needed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* increased z-index value */
+  backdrop-filter: blur(8px); /* This gives a nice blurred background effect */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+  box-shadow:0px 10px 30px 5px rgba(0, 0, 0, 0.51); /* increased shadow for more depth */
+  padding: 1rem;
+  background-color: rgb(0, 0, 0); /* semi-transparent background */
+}
+
+.logo img {
+  max-height: 40px;
+  transform: scale(1.2);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFF;
+  cursor: pointer;
+  transition: transform 0.4s ease-out;
+}
+
+.hamburger.rotate {
+  transform: rotate(90deg);
+}
+
+.navlinks {
+  display: flex;
+  font-weight: bold;
+  gap: 15px; /* increased gap */
+}
+
+.navlinks a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* added border-radius for a rounded effect on hover */
+  transition: background-color 0.3s, transform 0.3s; /* added transform for a smooth hover effect */
+}
+
+.navlinks a:hover {
+  background-color: rgba(61, 58, 58, 0.995);
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .navlinks.open {
+    display: flex;
+  }
+}

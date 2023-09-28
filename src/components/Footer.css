@@ -1,0 +1,76 @@
+/* Footer.css */
+
+.footer {
+  background-color: #232323; /* Dark gray background */
+  color: white;
+  padding: 40px 0;
+  margin: 0;
+  margin-right: 0;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.maincontent {
+  max-width: 1200px; 
+  margin: 0 auto; /* Center the content if the screen is wider than 1200px */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.right {
+  text-align: s;
+}
+
+.location p, .phone h4, .email h4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+
+.right h4 {
+  border-bottom: 2px solid #2b06e7fe;
+  padding-bottom: 10px;
+  display: inline-block; /* This keeps the border below the heading even with right text alignment */
+  margin-bottom: 20px;
+}
+
+.social a {
+  margin-left: 15px; /* Adjusted to margin-left since links are now on the right */
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social a:hover {
+  transition:scale(1.2);
+  opacity: 0.6;
+  
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .maincontent {
+      flex-direction: column;
+      padding-left: 15px;
+  }
+
+  .left, .right {
+      padding: 20px 0;
+      text-align: center;
+  }
+}

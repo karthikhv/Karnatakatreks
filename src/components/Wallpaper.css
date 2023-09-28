@@ -1,0 +1,42 @@
+.home-screen {
+  width: 100vw;               /* Full viewport width */
+    height: 81vh;              /* Full viewport height */
+    background-size: cover;     /* Cover the viewport */
+    background-position: center;/* Center the image */
+    background-repeat: no-repeat;/* Don't repeat the image */
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease;
+    opacity: 1;
+  transition:none;/* Smooth transition between images */
+  position: relative; /* makes it the reference for the absolute positioning of children */
+}
+.home-screen::after {
+ content: "";
+ position: absolute;
+ top: 95%;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(21, 52, 23, 0.753));
+ pointer-events: none;
+}
+.navbar-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;  /* ensures navbar appears above the wallpaper */
+  /* you can set a specific height for the navbar or let it adjust based on its content */
+}
+@media only screen and (max-width: 768px) {
+  .home-screen {
+      height: 100vh; /* Taking up the full height on mobile for a better experience */
+  }
+
+  .home-screen::after {
+      top: 90%; /* Adjusting gradient start position for mobile */
+  }
+
+  /* Add any other adjustments needed for mobile layout */
+}

@@ -1,0 +1,108 @@
+.display {
+  /* Background Image */
+  background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  /* This pseudo-element creates the opacity layer */
+  position: relative;
+}
+
+.display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);  /* white color with 60% opacity */
+  z-index: -1;
+}
+
+
+.placetop {
+  width: 100%;
+  padding-bottom: 10px;
+  margin-top: 5%; /* Increased for more spacing */
+}
+
+
+.place-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Increased for more spacing */
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.264); /* Enhanced shadow for better depth */
+  background-color: #16330923; /* Adjusted for more depth */
+  width: 100%;
+  max-width: 850px; /* Slightly increased */
+  margin: 0 auto; /* Centering shortcut */
+  z-index: 1; /* Scale images on hover for a subtle effect */
+
+  transition: transform 0.3s, box-shadow 0.3s; /* Added for hover transition */
+}
+
+.place-main:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.1); /* Hover shadow effect */
+}
+
+.img-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.changeimg, .routebutton {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px; /* Adjusted margin */
+  overflow: hidden;
+  transition: transform 0.3s; /* Added for hover transition */
+}
+
+.changeimg:hover, .routebutton:hover {
+  transform: scale(1.05);
+}
+
+.changeimg img, .routebutton img {
+  width: 310px; /* Adjusted for better proportions */
+  height: 210px;
+  border-radius: 15px; /* Increased for consistency */
+  object-fit: cover;
+  margin: 5px;
+  transition: opacity 0.3s; /* Added for hover transition */
+}
+
+.changeimg img:hover, .routebutton img:hover {
+  opacity: 0.8; /* Slight fade on hover */
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px; /* Adjusted for consistency */
+  background-color: #fffffe9d; /* Adjusted for a lighter shade */
+  border-radius: 15px; /* Increased for consistency */
+  margin-top: 20px; /* Increased for more spacing */
+}
+
+.contain h1 {
+  color: #070606;
+  margin-bottom: 15px; /* Adjusted for more spacing */
+  font-size: 28px; /* Increased size */
+  font-weight: 600; /* Boldness increased */
+}
+
+.contain h6 {
+  color: #000000;
+  text-align: center;
+  max-width: 720px; /* Slightly increased */
+  font-size: 16px; /* Increased for better readability */
+}
