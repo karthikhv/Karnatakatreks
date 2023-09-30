@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/karthikhv/Karnatakatreks/static/css/main.4c6c1967.css",
-    "main.js": "/karthikhv/Karnatakatreks/static/js/main.795c52a2.js",
+    "main.js": "/karthikhv/Karnatakatreks/static/js/main.62ba06d7.js",
     "static/media/trek3.jpg": "/karthikhv/Karnatakatreks/static/media/trek3.00c2530c6c9f33fc73ae.jpg",
     "static/media/trek2.jpg": "/karthikhv/Karnatakatreks/static/media/trek2.93bd4637802f75f8fa3c.jpg",
     "static/media/i10.jpg": "/karthikhv/Karnatakatreks/static/media/i10.45d1b93581e57a0cfd10.jpg",
@@ -51,10 +51,10 @@
     "static/media/logo.jpg": "/karthikhv/Karnatakatreks/static/media/logo.62936c802a4dd4fc9096.jpg",
     "index.html": "/karthikhv/Karnatakatreks/index.html",
     "main.4c6c1967.css.map": "/karthikhv/Karnatakatreks/static/css/main.4c6c1967.css.map",
-    "main.795c52a2.js.map": "/karthikhv/Karnatakatreks/static/js/main.795c52a2.js.map"
+    "main.62ba06d7.js.map": "/karthikhv/Karnatakatreks/static/js/main.62ba06d7.js.map"
   },
   "entrypoints": [
     "static/css/main.4c6c1967.css",
-    "static/js/main.795c52a2.js"
+    "static/js/main.62ba06d7.js"
   ]
 }
